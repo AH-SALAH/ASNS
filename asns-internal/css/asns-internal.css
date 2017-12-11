@@ -382,7 +382,7 @@ a:hover{
     position: fixed;
     z-index: 4;
     margin: 0 auto;
-    opacity: 0;
+    /*opacity: 0;*/
     display: none;
 }
 

@@ -585,9 +585,9 @@ $(".about-circle-div").on('mouseleave','svg', function(e){
       $("#switch-input").prop('checked');
       var checked = $("#switch-input").prop('checked');
   if(checked) {
-      $(".cover").show( "pulsate","easeInOutElastic",500);
+      $(".cover").show( "pulsate","easeInOutElastic",500).css({'opacity':'1'}); 
     } else {
-          $(".cover").hide( "pulsate","easeInOutElastic",500);
+      $(".cover").hide( "pulsate","easeInOutElastic",500).css({'opacity':'0'});
   }
 
 });
