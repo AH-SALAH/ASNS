@@ -29,7 +29,7 @@
 
 //********************************************************
 
-if ( ! function_exists( 'asns_setup' ) ) :
+if ( ! function_exists( 'asns_internal_setup' ) ) :
 
 /*
  * Sets up theme defaults and registers support for various WordPress features.
@@ -298,7 +298,7 @@ add_filter( 'style_loader_src', 'asns_remove_wp_version_strings' );
 
 /* Hide WP version strings from generator meta tag */
 function asns_remove_version() {
-return '';
+	return '';
 }
 add_filter('the_generator', 'asns_remove_version');
 
@@ -928,11 +928,11 @@ add_filter('user_contactmethods','add_contactmethods',10,1);
  * Adds a `js` class to the root `<html>` element when JavaScript is detected.
  */
 
-function asns_javascript_detection() {
+// function asns_javascript_detection() {
 
-	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+// 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 
-}
+// }
 
 // add_action( 'wp_head', 'asns_javascript_detection', 0 );
 
@@ -1095,7 +1095,7 @@ add_action('pending_to_publish', 'autoset_featured');
 add_action('future_to_publish', 'autoset_featured');
 
 //**********************************************************
-// A better way to add “time ago” to your
+// A better way to add “time ago” to your site
 
 function the_time_ago() {
  
@@ -1286,9 +1286,9 @@ add_filter( 'admin_head', 'new_global_avatar' );
 
 // *************************************************
 // *************************************************
-// Customise the footer in admin area
+// Customize the footer in admin area
 function asns_footer_admin () {
-	echo ' '.__('Theme designed and developed by','asns-internal') .' <a class="credit" href="#" target="_blank"><span>アハマド</span> <span>✡</span> サラーハ</a>';
+	echo ' '.__('Theme designed and developed by','asns-internal') .' <a class="credit" href="https://github.com/ELUHIMGADOL" target="_blank"><span>アハマド</span> <span>✡</span> サラーハ</a>';
 }
 add_filter('admin_footer_text', 'asns_footer_admin');
 

@@ -42,7 +42,7 @@
                }
              }
         ?>
-        </div> <!-- .post-tags -->
+        </div> --> <!-- .post-tags -->
 
             <?php
             $original_post = $post;
